@@ -3,7 +3,8 @@ STARTING_POSITIONS = [0,-20,-40]
 UP = 90
 DOWN = 270
 RIGHT = 0
-LEFT =180
+LEFT = 180
+
 class Snake:
     def __init__(self):
         self.turtles = []
@@ -34,7 +35,6 @@ class Snake:
         self.turtles.append(added_snake)
         added_snake.color("green2")
         
-
     def forwards(self):
         if self.head.heading() != DOWN:
             self.head.setheading(UP)

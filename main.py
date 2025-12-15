@@ -6,7 +6,7 @@ from scoreboard import ScoreBoard
 
 screen = Screen()
 SCREEN_WIDTH = 700
-SCREEN_HEIGHT = 700 
+SCREEN_HEIGHT = 700
 POS_X_BORDER = 345
 POS_Y_BORDER = 345
 NEG_X_BORDER = -345
@@ -14,13 +14,11 @@ NEG_Y_BORDER = -345
 
 screen.bgcolor("black")
 screen.setup(width=SCREEN_WIDTH,height=SCREEN_HEIGHT)
-
 screen.tracer(0)
 
 scoreboard = ScoreBoard()
 snake = Snake()
-foods = [Food() for i in range(5)] #create list of foods
-
+foods = [Food() for i in range(0,7)] # Create list of foods
 
 screen.listen()
 screen.onkey(snake.forwards, "w")
@@ -34,12 +32,10 @@ screen.onkey(snake.right, "Right")
 
 screen.title("Snake Game")
 
-
-
 game_running = True
 while game_running:
         screen.update()
-        time.sleep(0.08)
+        time.sleep(0.07)
         snake.move_snake()
         
         for food in foods:          #food (adds score for food)
